@@ -2,12 +2,12 @@ import java.util.ArrayList;
 
 public class Drink {
 
-    private int id;
-    private String name;
-    private String category;
+    private int id = 0;
+    private String name = "";
+    private String category = "";
     private ArrayList<String> ingredients = new ArrayList<String>();
-    private String instructions;
-    private String urlPhoto;
+    private String instructions = "";
+    private String urlPhoto = "";
 
 
 

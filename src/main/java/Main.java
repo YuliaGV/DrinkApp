@@ -7,14 +7,13 @@ public class Main {
     public static void main(String[] args) {
 
         JFrame frame = new JFrame();
-        frame.setContentPane(new DrinksUI().panel1);
+        frame.setContentPane(new DrinksUI().panelDrink);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
         frame.setVisible(true);
 
-        DrinksDAO drinksDAO = new DrinksDAOImp();
-        System.out.println(drinksDAO.getDrink().toString());
+
 
 
 

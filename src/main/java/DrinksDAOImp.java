@@ -2,7 +2,11 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
+import javax.imageio.ImageIO;
+import java.awt.*;
+import java.io.IOException;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Scanner;
 
@@ -75,6 +79,19 @@ public class DrinksDAOImp implements DrinksDAO{
 
         return foundDrink;
 
+
+    }
+
+
+    public Image getPhoto(String loc)  {
+        Image image = null;
+        try {
+            URL urlImage = new URL(loc);
+            image = ImageIO.read(urlImage);
+            return image;
+        }catch (IOException e) {
+            return null;
+        }
 
     }
 }

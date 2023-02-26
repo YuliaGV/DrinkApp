@@ -1,16 +1,182 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="DrinksUI">
-  <grid id="27dc6" binding="panel1" layout-manager="BorderLayout" hgap="0" vgap="0">
+  <grid id="27dc6" binding="panelDrink" layout-manager="GridBagLayout">
     <constraints>
       <xy x="20" y="20" width="800" height="600"/>
     </constraints>
     <properties>
-      <maximumSize width="800" height="600"/>
-      <minimumSize width="800" height="600"/>
-      <preferredSize width="800" height="600"/>
-      <requestFocusEnabled value="false"/>
+      <background color="-8758"/>
+      <enabled value="true"/>
+      <font/>
+      <foreground color="-8758"/>
+      <inheritsPopupMenu value="false"/>
+      <maximumSize width="600" height="450"/>
+      <minimumSize width="600" height="450"/>
+      <preferredSize width="600" height="450"/>
+      <requestFocusEnabled value="true"/>
+      <visible value="true"/>
     </properties>
     <border type="none"/>
-    <children/>
+    <children>
+      <component id="fa5f3" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font size="16" style="1"/>
+          <text value="What do you want to drink?"/>
+        </properties>
+      </component>
+      <grid id="de9b9" binding="panelData" layout-manager="GridLayoutManager" row-count="8" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="30" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <background color="-8758"/>
+          <visible value="true"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="e970d" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font style="1"/>
+              <text value="Name"/>
+              <visible value="true"/>
+            </properties>
+          </component>
+          <component id="6032" class="javax.swing.JLabel" binding="name">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="6b36d" class="javax.swing.JLabel" binding="category">
+            <constraints>
+              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="1194d" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font style="1"/>
+              <text value="Category"/>
+            </properties>
+          </component>
+          <component id="bf9e" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font style="1"/>
+              <text value="Ingredients"/>
+            </properties>
+          </component>
+          <component id="94135" class="javax.swing.JList" binding="ingredients">
+            <constraints>
+              <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="50"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-8758"/>
+              <model/>
+            </properties>
+          </component>
+          <component id="d7f74" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="6" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font style="1"/>
+              <text value="Instructions"/>
+            </properties>
+          </component>
+          <scrollpane id="3695e">
+            <constraints>
+              <grid row="7" column="0" row-span="1" col-span="2" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <minimum-size width="250" height="100"/>
+                <preferred-size width="250" height="100"/>
+                <maximum-size width="250" height="100"/>
+              </grid>
+            </constraints>
+            <properties>
+              <horizontalScrollBarPolicy value="30"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="30ce1" class="javax.swing.JTextArea" binding="instructions">
+                <constraints/>
+                <properties>
+                  <background color="-8758"/>
+                  <disabledTextColor color="-8758"/>
+                  <editable value="false"/>
+                  <lineWrap value="true"/>
+                  <text value=""/>
+                </properties>
+              </component>
+            </children>
+          </scrollpane>
+          <component id="981c3" class="javax.swing.JSeparator">
+            <constraints>
+              <grid row="3" column="0" row-span="1" col-span="2" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="c9440" class="javax.swing.JSeparator">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="54479" class="javax.swing.JSeparator">
+            <constraints>
+              <grid row="5" column="0" row-span="1" col-span="2" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties/>
+          </component>
+        </children>
+      </grid>
+      <component id="bea13" class="javax.swing.JButton" binding="showRecipe">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <background color="-38107"/>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="true"/>
+          <defaultCapable value="false"/>
+          <focusPainted value="false"/>
+          <foreground color="-16777216"/>
+          <text value="Show me a recipe"/>
+        </properties>
+      </component>
+      <grid id="9d7a7" binding="recipePhoto" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="25" bottom="0" right="0"/>
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <background color="-8758"/>
+          <maximumSize width="49" height="24"/>
+        </properties>
+        <border type="none"/>
+        <children/>
+      </grid>
+    </children>
   </grid>
 </form>
